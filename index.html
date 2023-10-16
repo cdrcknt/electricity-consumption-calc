@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+
+<body>
+    <div class="receipt">
+        <h1 style="margin-bottom: 10px;">ABC Electric Company</h1>
+        <h2>Quezon City</h2>
+        <div class="left-aligned">
+            <div class="input-container">
+                <div class="input-field">
+                    <label for="accountName">Account Name:</label>
+                    <input type="text" id="accountName" value="">
+                </div>
+
+                <div class="input-field">
+                    <label for="address">Address:</label>
+                    <input type="text" id="address" value="">
+                </div>
+
+                <div class="input-field">
+                    <label for="previousReading">Previous Reading:</label>
+                    <input type="number" id="previousReading" value="">
+                </div>
+
+                <div class="input-field">
+                    <label for="presentReading">Present Reading:</label>
+                    <input type="number" id="presentReading" value="">
+                </div>
+
+                <div class="input-field">
+                    <label for="kWhConsumed">KWh Consumed:</label>
+                    <div id="kWhConsumed" class="readonly-box">0</div>
+                </div>
+
+                <button class="button-3" role="button" style="margin: 0 auto; display: block;">Calculate</button>
+            </div>
+            <h2 class="account-header"><strong>ELECTRIC BILL STATEMENT OF ACCOUNT</strong></h2>
+
+        <table id="chargesTable">
+            <tr>
+                <th></th>
+                <th>Rate</th>
+                <th>Amount</th>
+            </tr>
+            <tr>
+                <td colspan="3"><strong>GENERATION CHARGES</strong></td>
+            </tr>
+            <tr>
+                <td>Generation System Charge</td>
+                <td>3.5588</td>
+                <td id="generationSystemCharge">0</td>
+            </tr>
+            <tr>
+                <td>Power Act Reduction</td>
+                <td>-0.3</td>
+                <td id="powerActReduction">0</td>
+            </tr>
+            <tr>
+                <td>Franchise and Benefits</td>
+                <td>0.0245</td>
+                <td id="franchiseAndBenefits">0</td>
+            </tr>
+            <tr class="subtotal">
+                <td colspan="2">Sub-total</td>
+                <td id="generationSubtotal">0</td>
+            </tr>
+            <tr>
+                <td colspan="3"><strong>TRANSMISSION CHARGES</strong></td>
+            </tr>
+            <tr>
+                <td>Transmission System Charge</td>
+                <td>1.0907</td>
+                <td id="transmissionSystemCharge">0</td>
+            </tr>
+            <tr class="subtotal">
+                <td colspan="2">Sub-total</td>
+                <td id="transmissionSubtotal">0</td>
+            </tr>
+            <tr>
+                <td colspan="3"><strong>DISTRIBUTION CHARGES</strong></td>
+            </tr>
+            <tr>
+                <td>Distribution System Charge</td>
+                <td>0.8726</td>
+                <td id="distributionSystemCharge">0</td>
+            </tr>
+            <tr class="subtotal">
+                <td colspan="2">Sub-total</td>
+                <td id="distributionSubtotal">0</td>
+            </tr>
+
+            <tr>
+                <td colspan="3"><strong>UNIVERSAL CHARGE</strong></td>
+            </tr>
+            <tr>
+                <td>Missionary Electrification</td>
+                <td>0.0373</td>
+                <td id="missionaryElectrification">0</td>
+            </tr>
+            <tr>
+                <td>Environmental Charges</td>
+                <td>0.0025</td>
+                <td id="environmentalCharges">0</td>
+            </tr>
+
+            <tr class="subtotal">
+                <td colspan="2">Sub-total</td>
+                <td id="universalChargeSubtotal">0</td>
+            </tr>
+
+            <tr>
+                <td colspan="3"><strong>OTHER CHARGES</strong></td>
+            </tr>
+            <tr>
+                <td>Loan Condonation</td>
+                <td>-0.1591</td>
+                <td id="loanCondonation">0</td>
+            </tr>
+            <tr>
+                <td>Lifeline Rate Subsidy</td>
+                <td>0.0883</td>
+                <td id="lifelineRateSubsidy">0</td>
+            </tr>
+            <tr class="subtotal">
+                <td colspan="2">Sub-total</td>
+                <td id="otherChargesSubtotal">0</td>
+            </tr>
+
+            <tr>
+                <td colspan="3"><strong>VALUE ADDED TAX</strong></td>
+            </tr>
+            <tr>
+                <td>Generation</td>
+                <td>0.2706</td>
+                <td id="generation">0</td>
+            </tr>
+            <tr>
+                <td>Transmission</td>
+                <td>0.1158</td>
+                <td id="transmission">0</td>
+            </tr>
+            <tr>
+                <td>Distribution</td>
+                <td>0.22</td>
+                <td id="distribution">0</td>
+            </tr>
+            <tr>
+                <td>System Loss</td>
+                <td>0.075</td>
+                <td id="systemLoss">0</td>
+            </tr>
+            <tr class="subtotal">
+                <td colspan="2">Sub-total</td>
+                <td id="vatSubtotal">0</td>
+            </tr>
+    <tr>
+  <tr>
+    <td colspan="2"><strong>CURRENT AMOUNT DUE</strong></td>
+    <td id="totalAmount" class="amount-subtotal"><strong>0</strong></td>
+  </tr>
+</table>
+</table>
+    <script src="script.js"></script>
+</body>
+
+</html>
